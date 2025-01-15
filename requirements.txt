@@ -1,4 +1,5 @@
-tensorflow==2.15.0
+# tensorflow==2.15.0 
+tensorflow==2.16.1 #Try this version if you have issues with the 2.15.0 version
 numpy
 pandas
 matplotlib
