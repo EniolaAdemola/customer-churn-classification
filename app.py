@@ -6,16 +6,16 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 
 # Load the trained model, Scaler, LabelEncoder, and one hot encoder
-model = load_model('model.h5')
+model = load_model('./models/model.h5')
 
 # Load the encoder and scaler
-with open('onehot_encoder_geo.pki', 'rb') as file:
+with open('./models/onehot_encoder_geo.pki', 'rb') as file:
     onehot_encoder_geo = pickle.load(file)
 
-with open('label_encoder_gender.pki', 'rb') as file:
+with open('./models/label_encoder_gender.pki', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open('scaler.pki', 'rb') as file:
+with open('./models/scaler.pki', 'rb') as file:
     scaler = pickle.load(file)
 
 
