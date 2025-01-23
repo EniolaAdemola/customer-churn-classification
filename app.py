@@ -60,10 +60,14 @@ prediction = model.predict(input_data_scaled)
 prediction_proba = prediction[0][0]
 
 
-st.write(f"Prediction: {prediction_proba:.2f}")
+proba_percentage = prediction_proba * 100
 
+st.write(f"Prediction: {prediction_proba:.3f}")
+
+# Determine and display the likelihood of churn
 if prediction_proba > 0.5:
-    st.write("The customer is likely to churn")
+    st.write(f"There is a {proba_percentage:.2f}% chance the customer is likely to churn.")
 else:
-    st.write("The customer is not likely to churn")
+    st.write(f"There is a {proba_percentage:.2f}% chance the customer is not likely to churn.")
+
 
